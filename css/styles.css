@@ -249,6 +249,7 @@ background-color:var(--brand-color-accent);
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 
 .section-descript {
@@ -262,7 +263,6 @@ background-color:var(--brand-color-accent);
      display: flex;
     justify-content: space-between;
     list-style: none;
-    margin-bottom: 94px;
     }
 
 .advantages-item{
@@ -270,6 +270,10 @@ background-color:var(--brand-color-accent);
 }
 
 /* about our work */
+
+.section-about{
+    padding-bottom: 94px;
+}
 
 .section-title{color: var(--brand-color-title);
     font-weight: 700;
@@ -325,12 +329,14 @@ background-color:var(--brand-color-accent);
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-describe{padding: 30px 0;
+text-align: center;}
+
 .team-name{
     color: var(--brand-color-title);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -339,7 +345,6 @@ background-color:var(--brand-color-accent);
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
 }
 
 /* cases */
@@ -383,7 +388,7 @@ background-color:var(--brand-color-accent);
 /* footer */
 
 .footer{background-color: var(--brand-color-bg);
-padding: 60px;}
+padding: 60px 0;}
 
 .logo-link-f {
     text-decoration: none;
@@ -406,7 +411,10 @@ padding: 60px;}
 
 .site-nav-li{
     list-style-type: none;
+    margin-bottom: 9px;
   }
+
+  .site-nav-li:last-child{margin-bottom: 0;}
  
 .geolocation{color: var(--main-white);
     text-decoration: none;
