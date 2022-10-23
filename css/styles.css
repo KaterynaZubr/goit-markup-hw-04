@@ -4,6 +4,7 @@
 --brand-color-accent: #2196F3;
 --brand-color-bg: #2F303A;
 --main-white: #ffffff;
+--soc-icon: #AFB1B8;
 }
 /* колір основного тексту  #212121 */
 /*колір вторинного тексту  #757575  */
@@ -111,35 +112,28 @@ img{display: block;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-     display: flex;
-     gap: 50px;}
+    text-align: center;
+    fill: var(--brand-color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;}
      
-.site-nav:hover, .site-nav:focus {color: var(--brand-color-accent);}
+.site-nav:hover, .site-nav:focus {color: var(--brand-color-accent);
+fill: var(--brand-color-accent);}
 
 .contacts-list{list-style-type: none;
     display: flex;
-    gap: 50px;}
-
-
-
-.button-hero{
-        color: var(--main-white);
-        background-color: var(--brand-color-accent);
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.87;
-        letter-spacing: 0.06em;
-        cursor: pointer;
-        width: 216px;
-        height: 50px;
-        display: block;
-        border: 0;
-        border-radius: 4px;
-        text-align: center;
-         margin: 0 auto;
+    gap: 50px;
 }
+
+.contacts-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 
 /* portfolio  */
 
@@ -203,8 +197,36 @@ background-color:var(--brand-color-accent);
 /* hero section */
 
 .hero {
-    background-color: var(--brand-color-bg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), 
+    url(../images/Hero-bg.jpg);
+    background-color: #C4C4C4;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 200px 0;
+}
+
+.button-hero {
+    color: var(--main-white);
+    background-color: var(--brand-color-accent);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    width: 216px;
+    height: 50px;
+    display: block;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button-hero:hover, .button-hero:focus{background-color: #188CE8;
 }
 
 .hero-content{
@@ -243,6 +265,28 @@ background-color:var(--brand-color-accent);
     padding: 94px 0;
 }
 
+.advantages-container {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.advantages-item {
+    width: 270px;
+}
+
+.advantages-item-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+}
+
+
 .section-part {
     color: var(--brand-color-title);
     font-weight: 700;
@@ -259,15 +303,7 @@ background-color:var(--brand-color-accent);
     letter-spacing: 0.03em
 }
 
-.advantages-container{
-     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    }
 
-.advantages-item{
-    width: 270px;
-}
 
 /* about our work */
 
@@ -345,6 +381,31 @@ text-align: center;}
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
+}
+
+.soc-list{display: flex;
+    justify-content: center;
+    gap: 10px;
+    } 
+
+.soc-item{list-style-type: none;
+}
+
+.soc-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--soc-icon);
+    background-color: var(--main-white);
+}
+
+.soc-link:hover, .soc-link:focus{
+    background-color: var(--brand-color-accent);
+    fill: var(--main-white);
 }
 
 /* cases */
@@ -370,27 +431,90 @@ text-align: center;}
 .card-footer{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
-    border-top: none;} 
+    border-top: none;
+} 
 
 
 .section-part-portf{color:var(--brand-color-title);
         font-weight: 700;
         font-size: 18px;
         line-height: 2;    
-        letter-spacing: 0.06em;}
+        letter-spacing: 0.06em;
+}
 
 .portf-text{color: var(--brand-color-text);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.87;
-        letter-spacing: 0.03em;}
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+}
+    
+/* clients */
+
+.section-clients{padding: 94px 0;}
+
+.section-clients-name{
+    color: var(--brand-color-title);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.client-list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.client-item{
+    width: calc((100%-150px) / 6);
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    fill: var(--soc-icon);
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    display: flex;
+}
+
+.client-item:hover, .client-item:focus{
+    border: 1px solid var(--brand-color-accent);
+    fill: var(--brand-color-accent);
+}
+
 
 /* footer */
 
 .footer{background-color: var(--brand-color-bg);
 padding: 60px 0;}
 
-.logo-link-f {
+.footer-info-blocks{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.footer-info-item{
+    list-style-type: none;
+    display: block;
+}
+
+.footer-social{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height:1,14;
+    letter-spacing: 0.03;
+    color:var(--main-white);
+    margin-bottom: 20px;
+}
+
+.logo-link-f{
     text-decoration: none;
     /* display: flex; */
     align-items: center;
@@ -412,7 +536,7 @@ padding: 60px 0;}
 .site-nav-li{
     list-style-type: none;
     margin-bottom: 9px;
-  }
+}
 
   .site-nav-li:last-child{margin-bottom: 0;}
  
@@ -431,4 +555,23 @@ padding: 60px 0;}
     line-height: 1.7;
     letter-spacing: 0.03em;
     text-decoration: none;}
- .site-nav-f:hover, .site-nav-f:focus{color:var(--brand-color-accent)}
+ .site-nav-f:hover, .site-nav-f:focus{color:var(--brand-color-accent)
+}
+
+.soc-link-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--main-white);
+    background-color:rgba(255,
+        255,
+        255, 0.1);
+}
+
+.soc-link-f:hover, .soc-link-f:focus{
+ background-color: var(--brand-color-accent); 
+ fill: var(--main-white);  
+}
